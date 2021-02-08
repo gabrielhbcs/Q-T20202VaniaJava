@@ -49,5 +49,35 @@ public class CalculadoraTest {
 		assertThrows(ArithmeticException.class,
 				() -> calc.divisao(8, 0));
 	}
+	
+	@DisplayName("Testa a subtração de dois números")
+	@Test
+	public void testSubtracaoDoisNumeros() {
+		int soma = calc.subtracao(10, 5);
+		assertTrue(soma == 5);
+	}
+	
+	@DisplayName("Teste a > b")
+	@Test
+	public void testAMaiorB() {
+		int comparacao = calc.compara(10, 5);
+		assertTrue(comparacao == 1);
+	}
+	
+	@DisplayName("Teste a < b")
+	@Test
+	public void testAMenorB() {
+		int comparacao = calc.compara(5, 10);
+		assertTrue(comparacao == -1);
+	}
+	
+	@DisplayName("Teste a = b")
+	@Test
+	public void testAIgualrB() {
+		int comparacao = calc.compara(10, 10);
+		assertTrue(comparacao == 0);
+	}
+	
+	
 
 }

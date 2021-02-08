@@ -45,5 +45,18 @@ public class ProdutoTest {
 		assertThat(livro.getNome(), containsString("Teste"));
 		assertThat(livro, instanceOf(Produto.class));
 	}
+	
+	@DisplayName("Teste para pegar valor de produto")
+	@Test
+	public void testPegarValor() {
+		assertTrue(livro.getPreco() == 100.00);
+	}
+	
+	@DisplayName("Teste para troca de nome")
+	@Test
+	public void testTrocaNome() {
+		livro.setNome("Nome Teste");
+		assertTrue(livro.getNome() == "Nome Teste");
+	}
 
 }
